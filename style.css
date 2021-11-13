@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Puppies+Play&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --dark-pink: #864879;
+    --pink-light: #e8c4c9;
+    --hover: #852747;
+}
+
+/* navbar */
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--dark-pink);
+    box-shadow: 1px 4px 4px var(--pink-light);
+    z-index: 5;
+}
+
+#navbar ul {
+    display: flex;
+    padding: 0.5rem;
+}
+
+#navbar ul li {
+    list-style: none;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+#navbar ul li a {
+    color: var(--pink-light);
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    color: var(--hover);
+}
+
+/* welcome-section */
+#welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 80%;
+    padding: 3rem;
+}
+
+#welcome-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--pink-light);
+    text-shadow: 1px 1px 1px var(--dark-pink);
+}
+
+.welcome-section-img {
+    width: 40%;
+    overflow: hidden;
+    box-shadow: var(--pink-light) 1px 4px 4px 2px;
+    border-radius: 1rem;
+}
+
+div.welcome-container {
+    width: 100%;
+    padding: 1rem;
+}
+
+#welcome-section p {
+    line-height: 2rem;
+    opacity: 0.7;
+    font-size: 1.3rem;
+}
+
+span.name {
+    font-family: 'Puppies Play', cursive;
+    color: var(--hover);
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+::selection {
+    background: var(--dark-pink);
+    color: var(--pink-light)
+}
+
+/* projects-section */
+#projects {
+    text-align: center;
+    padding: 10% 2rem;
+}
+
+h3.projects-header {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--pink-light);
+    text-shadow: 1px 1px 1px var(--dark-pink);
+}
+
+div.projects-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem 0.2rem var(--pink-light);
+    border-radius: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--hover);
+}
+
+a:hover {
+    color: var(--pink-light);
+}
+
+img.project-img {
+    width: 60%;
+    padding: 3rem;
+}
+
+#projects span {
+    padding: 1rem;
+    opacity: 0.7;
+    text-align: center;
+}
+
+/* contact-section */
+#contact {
+    padding: 13% 2rem;
+    display: grid;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+h3.contact-header {
+    margin-top: 7rem;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--pink-light);
+    text-shadow: 1px 1px 1px var(--dark-pink);
+}
+
+div.contact-container {
+    border-color: var(--hover);
+}
+
+form {
+   width: 57%;
+   padding: 1.5rem;
+   font-size: 1.7rem;
+   color: #333;
+   margin: 0 auto;
+   border: .1rem solid var(--pink-light);
+   text-transform: none;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    color: var(--hover);
+    font-size: 3rem;
+    font-family: 'Puppies Play', cursive;
+}
+
+input {
+    max-width: 100%;
+    min-height: 3rem;
+    border-radius: 0.5rem;
+    border: none;
+    outline: none;
+    padding: 1em;
+    font-size: 1rem;
+}
+::placeholder {
+    opacity: 0.3;
+    font-size: 1.2rem;
+}
+
+textarea {
+    min-width: max-content;
+    min-height: 80px;
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5em 0.8em;
+    font-size: 1rem;
+}
+
+button {
+    display: inline-block; 
+    background: var(--dark-pink);
+    color: var(--pink-light);
+    padding: .5rem 3rem;
+    border: .2rem solid var(--hover);
+    cursor: pointer;
+    font-size: 3rem;
+    border-radius: 8px;
+    font-family: 'Puppies Play', cursive;
+    margin: 0 auto;
+}
+button:hover {
+    background: var(--pink-light);
+    color: var(--dark-pink);
+}
+
+/* footer */
+#footer {
+    min-height: 30vh;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+div.footer-links a i {
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+#footer p {
+    color: var(--hover);
+    font-family: 'Puppies Play', cursive;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+
+@media screen and (max-width:380px) {
+    form {
+        width: 82%;
+    }
+    #projects {
+        padding: 0;
+    }
+}
